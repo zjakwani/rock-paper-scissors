@@ -2,43 +2,17 @@
 <html>
 <head>
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-        function computerPlay() {
-            let n = Math.floor(Math.random() * 3);
-            return (n === 0) ? "rock" : (n === 1) ? "paper" : "scissors";
-        }
-        let score = 0;
-        function playRound(playerSelection, computerSelection) {
-            let x;
-            if (playerSelection.toLowerCase() == computerSelection) {
-                x = "It's a tie!"
-            }
-            else if (playerSelection.toLowerCase() == "rock") {
-                computerSelection == "paper" ? (x = "You Lose! Paper beats rock", score--) : (x = "You win! Rock beats Scissors", score++);
-            }
-            else if (playerSelection.toLowerCase() == "paper") {
-                computerSelection == "scissors" ? (x = "You Lose! Scissors beats paper", score--) : (x = "You win! Paper beats Rock", score++);
-            }
-            else if (playerSelection.toLowerCase() == "scissors") {
-                computerSelection == "rock" ? (x = "You Lose! Rock beats Scissors", score--) : (x = "You win! Scissors beats Paper", score++);
-            }
-            else {
-                x = "Please enter rock, paper, or scissors";
-            }
-            return x;
-        }
-        function game() {
-            for (i = 0; i < 5; i++) {
-                let input = window.prompt("Enter rock, paper, or scissors:");
-                console.log(playRound(input, computerPlay()));
-            }
-            let output = 0;
-            score < 0 ? output = `You Lose by ${-1 * score}` : score > 0 ? output = `You Win by ${score}` : output = "Match Draw";
-            console.log(output);
-            score = 0;
-        }
-    </script>
+    <div id="buttons">
+        <button id="rock"><img src="images/rock.png"></button>
+        <button id="paper"><img src="images/paper.png"></button>
+        <button id="scissors"><img src="images/scissors.png"></button>
+    </div>
+    <div id="playerScore">Player: 0</div>
+    <div id="computerScore">Computer: 0</div>
+    <div id="container"></div>
+    <script src="myScript.js"></script>
 </body>
 </html>

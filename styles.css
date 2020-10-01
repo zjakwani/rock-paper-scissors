@@ -1,0 +1,32 @@
+#buttons {
+    position: absolute; 
+    bottom: 0;
+}
+#buttons > * {
+    margin: 0 30px 20px 0;
+    border: 5px solid teal;
+    padding: 0;
+    border-radius: 5px;
+}
+#container {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+.round {
+    color: teal;
+    font-family: Verdana;
+    font-size: 1.1em;
+}
+#playerScore, #computerScore {
+    font-family: Verdana;
+    color: teal;
+    font-size: 3em;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+body {
+    background-color: lightgrey;
+}
+*:focus {outline: none !important}
